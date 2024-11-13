@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,
+        400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/fresh-list.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+  <h1>Desserts</h1>
+
+  <div class="main">
+    <div class="product-grid ">
+      <div class="product-container">
+
+        <div class="js-product-grid">
+          <div class="product-image-container">
+            <img class="product-image" src="/assets/images/image-waffle-tablet.jpg" alt="">
+          </div>
+
+          <div class="product-button">
+            <button>
+              <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+          </div>
+
+          <div class="product-name-title">
+            Waffle
+          </div>
+
+          <div class="product-name">
+            Waffle with Berries
+          </div>
+
+          <div class="product-price">
+            $6.50
+          </div>
+
+        </div>
+
+
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-creme-brulee-desktop.jpg"
+            style="border: 2px solid salmon;" width="200px" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Crème Brûlée
+        </div>
+
+        <div class="product-name">
+          Vanilla Bean Crème Brûlée
+        </div>
+
+        <div class="product-price">
+          $7.00
+        </div>
+
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-macaron-desktop.jpg" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Macaron Mix of Five
+        </div>
+
+        <div class="product-name">
+          Macaron
+        </div>
+
+        <div class="product-price">
+          $8.00
+        </div>
+      </div>
+
+
+
+
+      <div class="product-container">
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-tiramisu-desktop.jpg" style="border: 2px solid salmon;"
+            alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Tiramisu
+        </div>
+
+        <div class="product-name">
+          Classic Tiramisu
+        </div>
+
+        <div class="product-price">
+          $5.50
+        </div>
+
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-baklava-desktop.jpg" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Baklava
+        </div>
+
+        <div class="product-name">
+          Pistachio Baklava
+        </div>
+
+        <div class="product-price">
+          $4.00
+        </div>
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-meringue-desktop.jpg" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Pie
+        </div>
+
+        <div class="product-name">
+          Lemon Meringue Pie
+        </div>
+
+        <div class="product-price">
+          $5.00
+        </div>
+      </div>
+
+
+      <div class="product-container">
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-cake-desktop.jpg" alt="">
+        </div>
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Cake
+        </div>
+
+        <div class="product-name">
+          Red Velvet Cake
+        </div>
+
+        <div class="product-price">
+          $4.50
+        </div>
+
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-cake-desktop.jpg" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Brownie
+        </div>
+
+        <div class="product-name">
+          Salted Caramel Brownie
+        </div>
+
+        <div class="product-price">
+          $4.50
+        </div>
+
+
+
+        <div class="product-image-container">
+          <img class="product-image" src="/assets/images/image-panna-cotta-desktop.jpg"
+            style="border: 2px solid salmon;" alt="">
+        </div>
+
+        <div class="product-button">
+          <button>
+            <img src="/assets/images/icon-add-to-cart.svg" alt=""> Add to Carts</button>
+        </div>
+
+        <div class="product-name-title">
+          Panna Cotta
+        </div>
+
+        <div class="product-name">
+          Vanilla Panna Cotta
+        </div>
+
+        <div class="product-price">
+          $4.65
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="product-grid-2">
+      <h1>Your Cart (7)</h1>
+
+      <div class="cart">
+
+        <div class="cart-name">
+          Classic Tiramisu
+        </div>
+
+        <div class="cart-item">
+          <div class="cart-number">
+            1x
+          </div>
+
+          <div class="cart-amount">
+            @$5.50 $5.50
+          </div>
+
+          <div class="cart-image">
+            <img src="/assets/images/icon-remove-item.svg" alt="">
+          </div>
+        </div>
+
+        <hr>
+
+
+        <div class="cart-name">
+          Vanilla Been Creme Brulee
+        </div>
+
+        <div class="cart-item">
+          <div class="cart-number">
+            1x
+          </div>
+
+          <div class="cart-amount">
+            @$700 $28.00
+          </div>
+
+          <div class="cart-image">
+            <img src="/assets/images/icon-remove-item.svg" alt="">
+          </div>
+        </div>
+
+        <hr>
+
+
+        <div class="cart-name">
+          Vanilla Panna Carta
+        </div>
+
+        <div class="cart-item">
+          <div class="cart-number">
+            1x
+          </div>
+
+          <div class="cart-amount">
+            @$6.50 $12.00
+          </div>
+
+          <div class="cart-image">
+            <img src="/assets/images/icon-remove-item.svg" alt="">
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="product-order">
+          <div class="product-total">
+            Order Total
+          </div>
+
+          <div class="product-cost">
+            $46.50
+          </div>
+        </div>
+
+        <div class="carbon">
+          <button
+            style="border: none; border-radius: 5px; padding-top: -6px; height: 45px; width: 300px; text-align: center;">
+            <img src="/assets/images/icon-carbon-neutral.svg" alt="">This is a carbon-neutral delivery
+          </button>
+
+        </div>
+
+        <div>
+          <button style="color: rgb(244, 235, 235); background-color: salmon;
+          border: none; height: 35px; width: 300px; margin-top: 20px; border-radius: 5px;">Confirm Order</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script/product-list.js"></script>
+
+</body>
+
+</html>

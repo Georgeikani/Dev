@@ -1,0 +1,159 @@
+.main{
+    padding-top: 60px;
+    display: flex;
+    
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 8, 1fr;
+}
+
+@media (max-width: 2000px) {
+    .product-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+@media (max-width: 1600px) {
+    .product-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media (max-width: 1300px) {
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 575px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 450px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.product.container{
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    border-right: 1px solid rgb(231, 231, 231);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 180px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+.product-image{
+ border-radius: 5px;
+ width:200px;  
+ height: 200px;
+ margin-bottom: -35px;
+}
+
+.product-button button{
+
+    border: 0px solid;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-top: -50px;
+    padding: 4px;
+    box-shadow: 1px 1px 2px 1px gray
+}
+
+.product-name, .product-name-title, .product-price{
+    margin-left: 20px;
+    padding: 3px;
+}
+
+.product-name-title{
+    color: salmon;
+}
+
+.product-grid-2{
+    background-color: #fcf8f8;
+    box-shadow: 1px 1px 1px gray;
+    height: 500px;
+    width: 350px;
+    border: 0px solid;
+    border-radius: 10px;
+    margin-right: 350px;
+ 
+}
+
+
+.cart-item{
+    display: flex;
+    gap: 3rem;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+
+.cart-name, h1{
+    margin-left: 20px;
+}
+
+.cart-number{
+    color: salmon;
+    margin-left: 20px;
+}
+
+.cart-amount{
+    color: darkolivegreen;
+}
+
+.cart-image{
+    background-color: salmon;
+    padding-left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+
+}
+
+.product-order{
+    display: flex;
+    gap: 2.5rem;
+    margin-left: 22px;
+   
+}
+
+.product-cost{
+    font-weight: bold;
+    margin-left: 50px ;
+}
+
+.carbon{
+    padding-top: 40px;
+}
+

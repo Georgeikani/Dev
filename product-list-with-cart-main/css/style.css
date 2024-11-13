@@ -1,0 +1,156 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    margin-left: 50px;
+
+  }
+
+  
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  .waffle img {
+    border: none;
+    border-radius: 8px;
+
+  }
+
+  .waffle button {
+    border: 0px solid;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    font-family: sans-serif;
+    margin-right: 50px;
+    font-size: 12pt;
+    box-shadow: 1px 1px 2px 1px gray
+  }
+
+  button img {
+    width: 21px;
+  }
+
+  .butt-div {
+    margin-left: 48px;
+    margin-top: -21px;
+
+  }
+
+  .butt-div {
+    margin-left: 25px;
+    margin-top: -21px;
+  }
+
+  .envelop{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .mother-div{
+    margin-top: 60px;
+    display: flex;
+  
+  }
+
+
+  @media (max-width: 2000px) {
+    .envelop{
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  @media (max-width: 1600px) {
+    .envelop{
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+
+  @media (max-width: 1300px) {
+    .envelop{
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+    .envelop{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+
+  @media (max-width: 800px) {
+    .envelop{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+  @media (max-width: 575px) {
+    .envelop{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 450px) {
+    .envelop{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }  
+
+  
+
+  .second-div{
+    background-color: #fcf8f8;
+    box-shadow: 1px 1px 1px gray;
+    height: 500px;
+    width: 350px;
+    border: 0px solid;
+    border-radius: 10px;
+    margin-right: 300px;
+  }
+
+  .cart{
+    margin-left: 30px;
+  }
+
+  .waffle-tag {
+    margin-top: -10px;
+    font-size: 1.2em;
+  }
+
+  .waffle-tag2 {
+    margin-top: -10px;
+    font-weight: bold;
+    color: orange;
+  }
+
+  .butt-div1 img {
+    display: inline-block;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+  }
+
+
+
+  .first-div, .first-divv, .first-divvv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+
+  .cart-div {
+    
+  }
