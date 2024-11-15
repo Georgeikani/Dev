@@ -7,18 +7,18 @@
  }];
 
  export function addToCart(productVendorName) {
-    let sameItem = '';
+    let matchingItem = '';
   
           //Checking if the same product is already in the cart
       cart.forEach((item) => {
         if (productVendorName === item.productVendorName){
-            sameItem = item;
+            matchingItem = item;
         }
       });
   
       //if the product is in the cart increase it by 1
-      if(sameItem){
-        sameItem.quantity += 1;
+      if(matchingItem){
+        matchingItem.quantity += 1;
       }else{
         cart.push({  // adding product to cart
           productVendorName: productVendorName,

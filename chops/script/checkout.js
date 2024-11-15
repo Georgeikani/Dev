@@ -1,6 +1,19 @@
 import {cart} from '../script/cart.js';
+import { vendor } from '../script/product.js';
 
 cart.forEach((item) =>{
+
+  const productVendorName = item.productVendorName;
+
+  let matchingItems;
+
+  vendor.forEach((cartItem) =>{
+      if(cartItem.id === productVendorName){
+          matchingItems = cartItem;
+      }
+  });
+
+      console.log(matchingItems);
   
     `
         <div class="cart-item-container">
