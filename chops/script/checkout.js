@@ -13,7 +13,7 @@ cart.forEach((item) =>{
       }
   });
 
-      console.log(matchingItems);
+  
   
     `
         <div class="cart-item-container">
