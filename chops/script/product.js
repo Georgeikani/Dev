@@ -1,4 +1,4 @@
-export const vendor = [{
+export const products = [{
     id: "7d691640-6d40-4c46-9422-42258fe79b51",
     first: "Waffles",
     Image: "assets/images/image-waffle-mobile.jpg",

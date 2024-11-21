@@ -1,21 +1,22 @@
 import {cart} from '../script/cart.js';
-import { vendor } from '../script/product.js';
+import { products } from '../script/product.js';
 
-cart.forEach((item) =>{
+let cartSummartHTML = '';
 
-  const productVendorName = item.productVendorName;
+cart.forEach((cartItem) =>{  //Looping and generating the html
 
-  let matchingItems;
+  //getting the productId out of the cartItem
+  const productId = cartItem.productId;
 
-  vendor.forEach((cartItem) =>{
-      if(cartItem.id === productVendorName){
-          matchingItems = cartItem;
+  let matchingItem;
+
+  products.forEach((product) =>{
+      if(product.id === productId){
+          matchingItem = product;
       }
   });
 
-  
-  
-    `
+    cartSummartHTML = cartSummartHTML + `
         <div class="cart-item-container">
             <div class="delivery-date">
               Delivery date: Tuesday, June 21
@@ -23,18 +24,18 @@ cart.forEach((item) =>{
 
             <div class="cart-item-details-grid">
               <img class="product-image"
-                src="assets/images/image-panna-cotta-tablet.jpg">
+                src="${matchingItem.Image}">
 
               <div class="cart-item-details">
                 <div class="product-name">
-                  Vanilla Pana Cake
+                ${matchingItem.name}
                 </div>
                 <div class="product-price">
-                  $10.90
+                  $${matchingItem.priceCent / 100}
                 </div>
                 <div class="product-quantity">
                   <span>
-                    Quantity: <span class="quantity-label">2</span>
+                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
                   </span>
                   <span class="update-quantity-link link-primary">
                     Update
@@ -91,6 +92,7 @@ cart.forEach((item) =>{
               </div>
             </div>
         </div>
+    `;
+});
 
-    `
-})
+document.querySelector('.js-order-summary').innerHTML = cartSummartHTML;

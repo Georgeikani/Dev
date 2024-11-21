@@ -7,10 +7,9 @@
 
     body{
         font-family: sans-serif;
-        color: white;
+        background-color: rgba(7, 7, 7, 0.979);
     }
 
-    
 
     .nav-link{
         background-color: rgba(7, 7, 7, 0.979);
@@ -18,16 +17,16 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem;
-        position: fixed;
+        position:;
         width: 100%;
+    
         
     }
 
     .ul-div{
         display: flex;
         gap: 1rem;
-        cursor: pointer;
-        
+        cursor: pointer;  
     }
 
     .ul-div a:hover{
@@ -41,17 +40,109 @@
 
     .header-div img{
         width: 150px;
+        height;
     }
 
-    .wrapper{
-        background-color: wheat;
-        height: 80vh;
+    .hero-area{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        align-items: center;
+        height: 50vh;
+        color: white;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 2rem;
     }
 
-    .intro-wrapper{
-        padding: 1rem;
+    .hero-text p{
+        font-size: 1.2em;
+    }
+
+    .hero-image img{
+     width: 350px;
+     transform: rotate(75deg);
+     border-radius: 300px;
+     height: auto;
+     margin-top: 3.8rem;
+    }
+
+    .hero-button{
+        display: flex;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .hero-lets-talk-button button{
+        background-color: rgb(242, 168, 58);
+        border: none;
+        width: 100px;
+        height: 30px;
+        font-weight: bold;
+    }
+
+    .hero-project{
+        margin-top: 0.4rem;
+        font-weight: bold;
+    }
+
+    .border-line{
+        border: 2px solid rgb(242, 168, 58);
+    }
+
+
+    .second-div{
+        margin-top: 6rem;
+        align-items: center;
+        text-align: center;
+        color: white;
+        
+    }
+    .skill-level{
+        display:flex ;
+        gap: 4rem;
+        align-items: center;
+        margin-top: 3rem;
+        margin-left:2rem ;
+    }
+
+    .skill-line{
+        border: 5px solid rgb(242, 168, 58);
+        width: 550px;
+        align-items: center;
+    }
+
+    .per-skill{
+        display:flex ;
+        justify-content: space-between;
+        
+    }
+    .skill-rate{
+        padding: 0.5rem;
+    }
+
+    .percentage{
+        font-weight: bold;
     }
     
- h1{
-        margin-bottom: 5rem;
+    .footer-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
     }
+
+    @media(max-width: 400px){
+        .nav-link{
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 100;
+            left: 0;
+            flex-direction: column;
+            padding: 1rem;
+        }
+    }
+
+
+
+   
