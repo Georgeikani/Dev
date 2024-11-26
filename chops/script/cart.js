@@ -1,9 +1,9 @@
- export const cart = [{  // Checkout page
+ export let cart = [{  // Checkout page
     productId: '26cf35b8-822c-414c-bd8c-f90d42d1bb28',
-    quantity: 0,
+    quantity: 2,
  }, {
     productId: 'c40d0bc6-231c-4287-856f-e4f076c3c4d8',
-    quantity: 0
+    quantity: 1
  }];
 
  export function addToCart(productId) {
@@ -26,3 +26,20 @@
         })
       }
   }
+
+// Steps to remove item from cart
+// 1-create new array
+// 2-loop through the cart
+// 3-add each product  to new array, except for this productid
+ export function removeFromCart(productId){ // deleting item from cart
+        const newCart = []
+
+        cart.forEach((cartItem) =>{
+          if(cartItem.productId !== productId){ //33
+            newCart.push(cartItem);
+          }
+        });
+
+        cart = newCart;
+  }
+  
