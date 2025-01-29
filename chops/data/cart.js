@@ -4,15 +4,17 @@
   cart =  [{  // Checkout page
     productId: '26cf35b8-822c-414c-bd8c-f90d42d1bb28',
     quantity: 2,
+    deliveryOptionsId: '1'
  }, {
     productId: 'c40d0bc6-231c-4287-856f-e4f076c3c4d8',
-    quantity: 1
+    quantity: 1,
+    deliveryOptionsId: '2' //adding delivery option ID to cart
  }];
  };
  
 
 
- function saveToLocalStorage() {
+ function saveToLocalStorage() { //saving item to cart
   localStorage.setItem('cart', JSON.stringify(cart));
  }
 
@@ -32,7 +34,8 @@
       }else{
         cart.push({  // adding product to cart
           productId: productId,
-          quantity: 1
+          quantity: 1,
+          deliveryOptionsId: '1' //adding delivery option ID to cart
         })
       }
 
