@@ -118,6 +118,11 @@
 .product-quantity .link-primary {
   margin-left: 3px;
   cursor: pointer;
+  color: rgb(28, 109, 28);
+}
+
+.product-quantity :hover{
+  color: rgb(91, 18, 18);
 }
 
 @media (max-width: 1000px) {
@@ -153,10 +158,11 @@
 }
 
 .delivery-option-date {
-  color: rgb(0, 118, 0);
+  color: rgb(28, 109, 28);
   font-weight: 500;
   margin-bottom: 3px;
 }
+
 
 .delivery-option-price {
   color: rgb(120, 120, 120);
