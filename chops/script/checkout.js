@@ -5,10 +5,10 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 import { deliveryOptions } from '../data/deliveryOptions.js';
 //Calculating delivery date
 
-hello()
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
-console.log(deliveryDate.format('dddd, MMMM D'));
+// hello()
+ //const today = dayjs();
+ //const deliveryDate = today.add(7, 'days');
+ //console.log(deliveryDate.format('dddd, MMMM D'));
 
 let cartSummartHTML = '';
 
@@ -25,11 +25,25 @@ cart.forEach((cartItem) => {  //Looping and generating the html
     }
   });
 
+    //updating delivery date to the actual date.
+    const deliveryOptionsId = cartItem.deliveryOptionsId;
+    let deliveryOption; 
+    deliveryOptions.forEach((Option) =>{
+      if(Option.id === deliveryOptionsId){
+        deliveryOption = Option
+      }
+    });
+
+    const today = dayjs();
+    const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+    const dateString = deliveryDate.format('dddd, MMMM D');
+
+
   cartSummartHTML = cartSummartHTML + `
         <div class="cart-item-container  
         js-cart-item-container-${matchingItem.id}">
             <div class="delivery-date">
-              Delivery date: Tuesday, June 21
+              ${dateString}
             </div>
 
             <div class="cart-item-details-grid">
@@ -61,7 +75,7 @@ cart.forEach((cartItem) => {  //Looping and generating the html
                   <div class="delivery-options-title">
                     Choose a delivery option:
                  </div>
-                ${deliveryOptionHTML(matchingItem)}
+                ${deliveryOptionHTML(matchingItem, cartItem)}
               
             
               </div>
@@ -70,9 +84,10 @@ cart.forEach((cartItem) => {  //Looping and generating the html
     `;
 });
 
-function deliveryOptionHTML(matchingItem) {
+function deliveryOptionHTML(matchingItem, cartItem) {
   let deliveryDateHTML = '';
 
+  //choosing a delivery option date..
   deliveryOptions.forEach((deliveryOption) => {
     const today = dayjs();
     const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
@@ -82,9 +97,13 @@ function deliveryOptionHTML(matchingItem) {
       ? 'Free'
       : `$${(deliveryOption.pricecents / 100).toFixed(2)} `;
 
+
+      const isChecked = deliveryOption.id === cartItem.deliveryOptionsId
+
     deliveryDateHTML = deliveryDateHTML + ` 
      <div class="delivery-option">
                   <input type="radio"
+                  ${isChecked ? 'checked' : ''} 
                     class="delivery-option-input"
                     name="delivery-option-${matchingItem.id}">
                   <div>
