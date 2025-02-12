@@ -4,11 +4,11 @@
   cart =  [{  // Checkout page
     productId: '26cf35b8-822c-414c-bd8c-f90d42d1bb28',
     quantity: 2,
-    deliveryOptionsId: '1'
+    deliveryOptionId: '1'
  }, {
     productId: 'c40d0bc6-231c-4287-856f-e4f076c3c4d8',
     quantity: 1,
-    deliveryOptionsId: '2' //adding delivery option ID to cart
+    deliveryOptionId: '2' //adding delivery option ID to the cart
  }];
  };
  
@@ -35,7 +35,7 @@
         cart.push({  // adding product to cart
           productId: productId,
           quantity: 1,
-          deliveryOptionsId: '1' //adding delivery option ID to cart
+          deliveryOptionId: '1' //adding delivery option ID to cart
         })
       }
 
@@ -60,3 +60,21 @@
         saveToLocalStorage();
   }
   
+  // After setting up the delivery date we make it interractive by
+  // Making the deliveryOption interactive
+  // 1. update deliveryOptionId in the cart
+  // 2. update the page to match the day we select
+  // When we are updating a deliveryOption we need to know the 
+  // product we are updating and deliveryOption we cho.
+ export function updateDeliveryOption(productId, deliveryOptionId){
+    let matchingItem
+    cart.forEach((cartItem) =>{
+      if (productId === cartItem.productId){
+        matchingItem =cartItem
+      }
+    });
+
+    matchingItem.deliveryOptionId = deliveryOptionId
+
+    saveToLocalStorage()
+  }
